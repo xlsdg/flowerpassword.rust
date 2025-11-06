@@ -27,7 +27,7 @@ exclude = [
 ]
 
 [dependencies]
-md5 = "0.7"
+md5 = "0.8"
 
 [dev-dependencies]
 
