@@ -1,0 +1,19 @@
+# Clippy configuration for flowerpassword.rust
+# See: https://doc.rust-lang.org/clippy/configuration.html
+
+# Warn on common mistakes
+msrv = "1.70.0"  # Minimum Supported Rust Version
+
+# Disallow certain lint categories
+# warn-on-all-wildcard-imports = true
+
+# Cognitive complexity threshold
+cognitive-complexity-threshold = 30
+
+# Documentation
+missing-docs-in-crate-items = false
+
+# Enable pedantic lints (selectively)
+# These are not enabled by default but are generally good practices
+too-many-arguments-threshold = 7
+type-complexity-threshold = 250

@@ -1,0 +1,36 @@
+[package]
+name = "flowerpassword"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.70"  # Minimum Supported Rust Version
+authors = ["xLsDg <xlsdg@qq.com>"]
+description = "Flower Password implementation for Rust - Deterministic password generator using HMAC-MD5"
+documentation = "https://docs.rs/flowerpassword"
+homepage = "https://github.com/xlsdg/flowerpassword.rust"
+repository = "https://github.com/xlsdg/flowerpassword.rust"
+readme = "README.md"
+license = "MIT"
+keywords = ["password", "generator", "security", "hmac", "flowerpassword"]
+categories = ["cryptography", "authentication"]
+include = [
+    "src/**/*",
+    "examples/**/*",
+    "Cargo.toml",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+]
+exclude = [
+    ".github/",
+    "target/",
+    "*.sh",
+]
+
+[dependencies]
+md5 = "0.7"
+
+[dev-dependencies]
+
+[lib]
+name = "flowerpassword"
+path = "src/lib.rs"

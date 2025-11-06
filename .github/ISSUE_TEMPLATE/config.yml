@@ -1,0 +1,14 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/xlsdg/flowerpassword.rust/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: 🔒 Security Vulnerability
+    url: mailto:xlsdg@qq.com
+    about: Report security vulnerabilities privately via email
+  - name: 📚 Documentation
+    url: https://docs.rs/flowerpassword
+    about: Read the API documentation on docs.rs
+  - name: 📦 Crates.io
+    url: https://crates.io/crates/flowerpassword
+    about: View the crate on crates.io
