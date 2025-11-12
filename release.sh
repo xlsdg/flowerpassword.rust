@@ -64,10 +64,6 @@ NEW_VERSION=$(grep -m 1 '^version = ' Cargo.toml | cut -d'"' -f2)
 echo -e "New version: ${GREEN}$NEW_VERSION${NC}"
 echo ""
 
-# Update Cargo.lock
-echo -e "${BLUE}Updating Cargo.lock...${NC}"
-cargo build --release
-
 # Run tests
 echo -e "${BLUE}Running tests...${NC}"
 cargo test --all-features --verbose
@@ -91,13 +87,13 @@ echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
   echo -e "${RED}Release cancelled${NC}"
   # Revert version change
-  git checkout Cargo.toml Cargo.lock
+  git checkout Cargo.toml
   exit 1
 fi
 
 # Commit and tag
 echo -e "${BLUE}Creating commit and tag...${NC}"
-git add Cargo.toml Cargo.lock
+git add Cargo.toml
 git commit -m "chore: bump version to $NEW_VERSION"
 git tag -a "v$NEW_VERSION" -m "Release v$NEW_VERSION"
 
