@@ -470,9 +470,12 @@ mod tests {
         for i in 0..100 {
             let password = fp_code("test", &format!("site{}.com", i), 16).unwrap();
             let first_char = password.chars().next().unwrap();
-            assert!(first_char.is_ascii_alphabetic(),
+            assert!(
+                first_char.is_ascii_alphabetic(),
                 "First character '{}' is not alphabetic in password '{}'",
-                first_char, password);
+                first_char,
+                password
+            );
         }
     }
 }

@@ -51,15 +51,12 @@ jobs:
           NEW_VERSION=$(grep -m 1 '^version = ' Cargo.toml | cut -d'"' -f2)
           echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
 
-      - name: Update Cargo.lock
-        run: cargo build --release
-
       - name: Run tests
         run: cargo test --all-features --verbose
 
       - name: Commit version bump
         run: |
-          git add Cargo.toml Cargo.lock
+          git add Cargo.toml
           git commit -m "chore: bump version to ${{ steps.bump_version.outputs.version }}"
 
       - name: Create and push tag

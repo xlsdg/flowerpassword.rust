@@ -26,12 +26,7 @@ fn main() {
     // Example 3: Multiple services
     println!("Example 3: Same master password, different services");
     let master = "my_master_password";
-    let services = vec![
-        "github.com",
-        "google.com",
-        "twitter.com",
-        "facebook.com",
-    ];
+    let services = vec!["github.com", "google.com", "twitter.com", "facebook.com"];
 
     for service in services {
         match fp_code(master, service, 16) {
