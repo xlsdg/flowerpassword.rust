@@ -1,6 +1,6 @@
 [package]
 name = "flowerpassword"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 rust-version = "1.70"  # Minimum Supported Rust Version
 authors = ["xLsDg <xlsdg@qq.com>"]
