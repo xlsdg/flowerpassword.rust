@@ -109,7 +109,7 @@ fn hmac_md5(message: &str, key: &str) -> String {
 
 /// Validates the length parameter
 fn validate_length(length: usize) -> Result<(), FlowerPasswordError> {
-    if length < MIN_LENGTH || length > MAX_LENGTH {
+    if !(MIN_LENGTH..=MAX_LENGTH).contains(&length) {
         Err(FlowerPasswordError::InvalidLength(length))
     } else {
         Ok(())
